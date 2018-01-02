@@ -9,15 +9,16 @@ var myAppModule = angular.module('myApp', [
   'myApp.directives',
   'myApp.controllers',
   'ui.tinymce',
-  'message.flash'
+  'message.flash',
+  'flow'
 ]).
 config(['$routeProvider','$locationProvider', function($routeProvider) {
   $routeProvider.when('/pages', {
-  	templateUrl: 'pages/pages.html', 
+  	templateUrl: 'pages/pages.html',
   	controller: 'PagesCtrl'
   });
   $routeProvider.when('/pages/add-edit-page/:id', {
-    templateUrl: 'pages/add-edit-page.html', 
+    templateUrl: 'pages/add-edit-page.html',
     controller: 'PagesAddEditCtrl'
   });
   $routeProvider.otherwise({redirectTo: '/'});

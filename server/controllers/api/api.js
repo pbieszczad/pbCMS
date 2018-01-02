@@ -20,6 +20,7 @@ router.post('/pages/add', function(req,res){
 		url:req.body.url,
 		content:req.body.content,
 		menuIndex: req.body.menuIndex,
+		featuredImage: req.body.featuredImage,
 		date:new Date(Date.now())
 	});
 
@@ -43,6 +44,7 @@ router.post('/pages/update', /*sessionCheck,*/ function(request, response) {
             url: request.body.url,
             content: request.body.content,
             menuIndex: request.body.menuIndex,
+						featuredImage: request.body.featuredImage,
             date: new Date(Date.now())
         }
     }).exec();

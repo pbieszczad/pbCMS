@@ -5,7 +5,8 @@ var Schema = mongoose.Schema;
         url: {type:String, index:{unique:true}},
         content: String,
         menuIndex: Number,
-        date: Date    
+        featuredImage: String,
+        date: Date  
     });
     var Page = mongoose.model('Page', Page);
     module.exports=Page;

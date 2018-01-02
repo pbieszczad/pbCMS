@@ -3,7 +3,7 @@
 /* Services */
 
 angular.module('myApp.services', [])
-	.factory('PagesFactory', ['$http', 
+	.factory('PagesFactory', ['$http',
 		function($http){
 			return{
 				getPages: function(){

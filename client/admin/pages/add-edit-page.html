@@ -27,6 +27,14 @@
 <textarea ui-tinymce="tinymceOptions"  rows="15" class="form-control" type="text" ng-model="pageContent.content"></textarea>
 </div>
 </div>
-<input type="submit" class="btn btn-success" value="Save">
+<input type="file" ng-change="passFilename()" ngf-select ng-model="picFile" name="file"
+             accept="image/*" ngf-max-size="2MB"
+             ngf-model-invalid="errorFile">
+             <img ng-src="/uploads/{{pageContent.featuredImage}}" alt="">
+      <img ng-show="myForm.file.$valid" ngf-thumbnail="picFile" class="thumb"> <button ng-click="picFile = null" ng-show="picFile">Remove</button>
+      <br>
+<input type="text" ng-model="pageContent.featuredImage">
+<div ng-bind="picFile.name"></div>
+<input type="submit" class="btn btn-success" value="Save" ng-click="uploadPic(picFile)">
 </div>
-</form> 
+</form>
