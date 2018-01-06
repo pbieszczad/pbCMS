@@ -21,7 +21,7 @@ angular.module('myApp.controllers', ['ngFileUpload'])
   $scope.heading = "Add a New Page";
   $scope.uploadPic = function(file) {
     file.upload = Upload.upload({
-      url: 'http://localhost:3000/upload',
+      url: 'http://localhost:3000/upload/page',
       data: {file: Upload.rename(file, $scope.pageContent.featuredImage)},
     });
 
